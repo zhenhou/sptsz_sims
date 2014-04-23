@@ -4,7 +4,7 @@
 F90C     = mpif90
 #F90C    = ifort
 
-healpix = $(HEALPIX)
+healpix = /global/homes/h/hou/Projects/CMBtools/Healpix_2.20a
 LAPACKL = -mkl -lmpi -lhealpix
 INCLUDE = /usr/common/usg/intel/13.0.028/composer_xe_2013.1.117/mkl/include
 
