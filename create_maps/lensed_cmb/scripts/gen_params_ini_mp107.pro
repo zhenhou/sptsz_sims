@@ -1,4 +1,4 @@
-PRO gen_params_ini
+PRO gen_params_ini_mp107
 	
 	nsim = 100
 	
@@ -26,13 +26,13 @@ PRO gen_params_ini
 	filename = 'submit.sh'
 	openw, 10, filename
 	printf, 10, '#PBS -S /bin/bash'
-	printf, 10, '#PBS -q usplanck'
-	printf, 10, '#PBS -l nodes=16:ppn=4'
-	printf, 10, '#PBS -l pvmem=5GB'
+	printf, 10, '#PBS -q regular'
+	printf, 10, '#PBS -l nodes=16:ppn=2'
+	printf, 10, '#PBS -l pvmem=10GB'
 	printf, 10, '#PBS -l walltime=24:00:00'
 	printf, 10, '#PBS -m abe'
 	printf, 10, '#PBS -j oe'
-	printf, 10, '#PBS -A usplanck'
+	printf, 10, '#PBS -A mp107'
 	printf, 10, '#PBS -N lsim'
 	printf, 10, '#PBS -e $PBS_JOBID.err'
 	printf, 10, '#PBS -o $PBS_JOBID.out'
