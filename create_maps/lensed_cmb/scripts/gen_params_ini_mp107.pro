@@ -41,7 +41,7 @@ PRO gen_params_ini_mp107
 	printf, 10, 'cd $PBS_O_WORKDIR'
     printf, 10, 'module load intel'
     printf, 10, 'module load openmpi-intel'
-    printf, 10, 'export OMP_NUM_THREADS=2'
+    printf, 10, 'export OMP_NUM_THREADS=4'
 	printf, 10, ' '
 	for i=0, nsim-1 do begin
 		sidx = strcompress(string(i), /remove_all)
