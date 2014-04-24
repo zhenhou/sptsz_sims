@@ -26,7 +26,7 @@ PRO gen_params_ini_mp107
 	filename = 'submit.sh'
 	openw, 10, filename
 	printf, 10, '#PBS -S /bin/bash'
-	printf, 01, '#PBS -q debug'
+	printf, 10, '#PBS -q debug'
     	printf, 10, '#PBS -l walltime=00:29:59'
 	; printf, 10, '#PBS -q regular'
     	; printf, 10, '#PBS -l walltime=12:00:00'
