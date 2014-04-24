@@ -27,9 +27,16 @@ PRO gen_params_ini_mp107
 	openw, 10, filename
 	printf, 10, '#PBS -S /bin/bash'
 	printf, 10, '#PBS -q regular'
+    printf, 10, '#PBS -l walltime=12:00:00'
+
+    ;; Monica, before final submission, I strongly suggest you change the above two lines to
+    ;; '#PBS -q debug'
+    ;; '#PBS -l walltime=00:29:59'
+    ;; It will make sure you can get the job running immediately and you can see if everything works fine.
+    ;; For details, see http://www.nersc.gov/users/computational-systems/carver/running-jobs/queues-and-policies/
+
 	printf, 10, '#PBS -l nodes=32:ppn=1'
 	printf, 10, '#PBS -l pvmem=20GB'
-	printf, 10, '#PBS -l walltime=12:00:00'
 	printf, 10, '#PBS -m abe'
 	printf, 10, '#PBS -j oe'
 	printf, 10, '#PBS -A mp107'
