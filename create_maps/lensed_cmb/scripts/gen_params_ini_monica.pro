@@ -10,7 +10,7 @@ PRO gen_params_ini_mp107
 		printf, 10, 'nside = 8192'
 		printf, 10, 'lmax = 4500'
 		printf, 10, 'cls_file = /global/u1/l/lmocanu/sptsz_sims/create_maps/lensed_cmb/data/lcdm_wmap7k11_lenspotentialCls.dat'  ;; modified
-		printf, 10, 'out_file_root = /global/scratch2/sd/lmocanu/data/sptsz_lowl/create_maps/lensed_cmb' ;; modified
+		printf, 10, 'out_file_root = /global/scratch2/sd/lmocanu/data/sptsz_lowl/create_maps/lensed_cmb/' ;; modified
 		printf, 10, 'out_file_suffix = sim'+sidx
 		printf, 10, 'lens_method = 1'
 		printf, 10, 'interp_factor = 0.375'
@@ -26,8 +26,10 @@ PRO gen_params_ini_mp107
 	filename = 'submit.sh'
 	openw, 10, filename
 	printf, 10, '#PBS -S /bin/bash'
-	printf, 10, '#PBS -q regular'
-    printf, 10, '#PBS -l walltime=12:00:00'
+	printf, 01, '#PBS -q debug'
+    	printf, 10, '#PBS -l walltime=00:29:59'
+	; printf, 10, '#PBS -q regular'
+    	; printf, 10, '#PBS -l walltime=12:00:00'
 
     ;; Monica, before final submission, I strongly suggest you change the above two lines to
     ;; '#PBS -q debug'
