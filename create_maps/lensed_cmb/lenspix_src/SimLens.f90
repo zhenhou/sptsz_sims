@@ -131,7 +131,7 @@ program SimLensCMB
 
   !! ZH_change_on !!
   !Save map to .fits file
-  call HealpixMap_Write(M, 'lensed_map_'//trim(file_stem)//'.fits')
+  call HealpixMap_Write(M, trim(file_stem)//'_lensed_map.fits', overwrite=.true.)
   !! ZH_change_off !!
 
   end if

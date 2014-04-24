@@ -10,7 +10,7 @@ INCLUDE = /usr/common/usg/intel/13.0.028/composer_xe_2013.1.117/mkl/include
 
 #Had problems with -O3 using ifort 11.1 and 12; use -fast if cluster is homogeneous
 #add -DHEALPIXI4B if using older healpix and get errors about arguments not matching
-FFLAGS = -O3 -ip -fpp -error-limit 5 -DMPIPIX -DMPI -heap-arrays
+FFLAGS = -O3 -ip -fpp -error-limit 5 -DMPIPIX -DMPI -heap-arrays -traceback
 
 ifndef CFITSIO
 cfitsio = /global/homes/h/hou/Projects/CMBtools/cfitsio/lib
